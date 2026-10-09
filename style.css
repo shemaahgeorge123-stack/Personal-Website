@@ -22,3 +22,136 @@ nav a {
 nav a:hover {
   background-color: #555;
 }
+/* --- Global Styles & Colors --- */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    color: #111111; /* Black text */
+    background-color: #ffffff; /* White page background */
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 750px;
+    margin: 80px auto 40px auto; /* 80px top margin keeps content from hiding under the fixed nav bar */
+    padding: 0 25px;
+}
+
+/* --- Dark Gray Navigation Bar (Shared across all pages) --- */
+nav {
+    background-color: #2b2b2b; /* Dark Gray */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; /* White text links */
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Orange Hover Effect */
+nav a:hover, nav a.active {
+    color: #ff6b00; /* Orange Accent */
+}
+
+/* --- Typography Elements --- */
+h1 {
+    font-size: 3rem;
+    color: #111111;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2b2b2b; /* Dark Gray */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    border-bottom: 2px solid #ff6b00; /* Orange underline */
+    padding-bottom: 8px;
+}
+
+.tagline {
+    font-size: 1.15rem;
+    color: #666666; /* Muted Dark Gray text */
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* --- Media Styling --- */
+.profile-img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.video-container {
+    margin-top: 25px;
+}
+
+/* --- Skills Table Layout --- */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.skills-table th, .skills-table td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.skills-table th {
+    background-color: #2b2b2b; /* Dark Gray */
+    color: #ffffff; /* White text */
+    font-weight: 600;
+}
+
+.skills-table td {
+    color: #111111;
+}
+
+/* --- Contact & Footer --- */
+.contact-method {
+    margin: 12px 0;
+    font-size: 1.1rem;
+}
+
+.contact-method strong {
+    color: #ff6b00; /* Orange highlight for emphasis */
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #2b2b2b; /* Dark Gray */
+    color: #ffffff; /* White text */
+    font-size: 0.8rem;
+    margin-top: 60px;
+}
+
