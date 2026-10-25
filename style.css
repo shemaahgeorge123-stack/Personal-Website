@@ -172,7 +172,7 @@ img {
         align-items: center
     }
 
-    /* dis for dh phone screen */
+    /* for dh phone screen ppl */
     nav li {
         margin: 10px 0;
     }
@@ -185,7 +185,7 @@ img {
     }
 }
 
-/* Mobile screens */
+/* tablet ppl */
 @media (max-width: 480px) {
     nav ul {
         flex-direction: column;
@@ -207,4 +207,15 @@ h2 {
     .tagline { 
         font-size: 1rem;
     }
+}
+
+/* the table */
+.skills-table {
+    width: 100%; 
+
+}
+ /* For the video */
+iframe {
+    max-width: 100%;
+    height: auto;
 }
