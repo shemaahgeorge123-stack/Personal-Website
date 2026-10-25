@@ -1,51 +1,53 @@
-
+/* Navigation Bar Styling */
 nav ul {
-  list-style-type: none;
+  list-style-type: none;   /* remove default bullet points */
   margin: 0;
   padding: 0;
-  background-color: #222;
-  display: flex;              
-  justify-content: center;    
+  background-color: #222;  /* dark background for nav */
+  display: flex;           /* flexbox for horizontal layout */
+  justify-content: center; /* center links horizontally */
 }
 
 nav li {
-  margin: 0 60px;             
+  margin: 0 60px;          /* spacing between nav items */
 }
 
 nav a {
-  text-decoration: none;
-  color: orangered;
+  text-decoration: none;   /* remove underline */
+  color: orangered;        /* link color */
   padding: 10px;
-  display: block;             
+  display: block;          /* make entire area clickable */
 }
 
 nav a:hover {
-  background-color: #555;
+  background-color: #555;  /* hover effect */
 }
 
+/* Global Body Styling */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* font stack */
     font-size: 16px;
     color: #111111; 
     background-color: #ffffff; 
     margin: 0;
     padding: 0;
-    line-height: 2;
+    line-height: 2;         /* spacing between lines */
 }
 
+/* Main Content Container */
 .container {
-    max-width: 750px;
+    max-width: 750px;       
     margin: 80px auto 40px auto; 
     padding: 0 25px;
 }
 
-
+/* Fixed Navigation Bar */
 nav {
     background-color: #2222; 
-    position: fixed;
+    position: fixed;         /* stays at top */
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 100;            /* stays above other elements */
 }
 
 nav ul {
@@ -56,26 +58,25 @@ nav ul {
 }
 
 nav li {
-    display: inline-block;
+    display: inline-block;   /* horizontal layout */
     margin: 0 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: #ffffff; 
+    color: #ffffff;          
     font-weight: 500;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out; 
 }
-
 
 nav a:hover, nav a.active {
-    color: orangered; 
+    color: orangered;        
 }
 
-
+/* Headings */
 h1 {
     font-size: 3rem;
     color: black;
@@ -93,6 +94,7 @@ h2 {
     padding-bottom: 8px;
 }
 
+/* Tagline Styling */
 .tagline {
     font-size: 1.15rem;
     color: #666666; 
@@ -100,7 +102,7 @@ h2 {
     font-style: italic;
 }
 
-
+/* Profile Image Styling */
 .profile-img {
     max-width: 180px;
     height: auto;
@@ -108,11 +110,12 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Video Container */
 .video-container {
     margin-top: 25px;
 }
 
-
+/* Skills Table Styling */
 .skills-table {
     width: 100%;
     border-collapse: collapse;
@@ -136,7 +139,7 @@ h2 {
     color: black;
 }
 
-
+/* Contact Section */
 .contact-method {
     margin: 12px 0;
     font-size: 1.1rem;
@@ -146,6 +149,7 @@ h2 {
     color: orangered; 
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -155,30 +159,26 @@ footer {
     margin-top: 60px;
 }
 
+/* Image Responsiveness */
 img {
-    max-width: 100%;
+    max-width: 100%;   /* shrink with screen */
     height: auto;
-
-}
-.container {
-    max-width: 750px;
-    margin: 80px auto 40px auto; 
-    padding: 0 25px;
 }
 
+/* Responsive Tablet */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center
+        flex-direction: row; 
+        flex-wrap: wrap;    
+        align-items: center;
     }
 
-    /* for dh phone screen ppl */
     nav li {
-        margin: 5px 10px;
+        margin: 5px 10px;    
     }
+
     h1 {
-        font-size: 3rem;
+        font-size: 3rem;   
     }
 
     .container {
@@ -186,36 +186,41 @@ img {
     }
 }
 
-/* tablet ppl */
+/* Responsive Design - Mobile */
 @media (max-width: 480px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* stack vertically */
         padding: 10px 0;
         margin: 8px 0;
     }
-nav li {
+
+    nav li {
         margin: 8px 0;
     }
-nav a {
+
+    nav a {
         font-size: 1rem;
     }
+
     h1 {
         font-size: 1.5rem;
     }
-h2 {
+
+    h2 {
         font-size: 1.2rem;
     }
+
     .tagline { 
         font-size: 1rem;
     }
 }
 
-/* the table */
+/* Responsive Table */
 .skills-table {
     width: 100%; 
-
 }
- /* For the video */
+
+/* Responsive Video */
 iframe {
     max-width: 100%;
     height: auto;
