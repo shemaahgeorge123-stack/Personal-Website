@@ -31,18 +31,21 @@ body {
     background-color: #ffffff; 
     margin: 0;
     padding: 0;
-    line-height: 2;         /* spacing between lines */
+    line-height: 2;         
 
     /* Footer fix */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    /* Nav bar fix */
+    padding-top: 80px; /* offset content so it's not hidden behind fixed nav */
 }
 
 /* Main Content Container */
 .container {
     max-width: 750px;       
-    margin: 80px auto 40px auto; 
+    margin: 40px auto;      /* reduced top margin since body now has padding */
     padding: 0 25px;
 
     /* Footer fix */
