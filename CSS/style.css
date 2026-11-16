@@ -1,7 +1,6 @@
-/* ==========================================
-   Color Variables (Light & Dark Palettes)
-   ========================================== */
-:root {
+
+/*  Color Variables (Light & Dark Palettes) JavaScript */
+  :root {
     --bg-color: #ffffff;
     --text-color: #111111;
     --heading-color: #000000;
@@ -28,6 +27,64 @@ body {
     line-height: 2;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+
+/*Timed welcome message pop up*/
+
+/* ==========================================
+   Welcome Pop-up Modal Styling
+   ========================================== */
+.modal-overlay {
+    display: none; /* Hidden until JavaScript opens it */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid orangered;
+    max-width: 400px;
+    width: 85%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.modal-box h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+#close-modal-btn {
+    background-color: orangered;
+    color: #ffffff;
+    border: none;
+    padding: 8px 24px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#close-modal-btn:hover {
+    background-color: #cc3700;
+}
+
+
+
+
+
+
 
 /* Main Content Container */
 .container {
