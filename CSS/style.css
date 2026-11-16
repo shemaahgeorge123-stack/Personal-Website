@@ -1,37 +1,32 @@
-/* Navigation Bar Styling */
-nav ul {
-  list-style-type: none;   /* remove default bullet points */
-  margin: 0;
-  padding: 0;
-  background-color: #222;  /* dark background for nav */
-  display: flex;           /* flexbox for horizontal layout */
-  justify-content: center; /* center links horizontally */
+/* ==========================================
+   Color Variables (Light & Dark Palettes)
+   ========================================== */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111111;
+    --heading-color: #000000;
+    --tagline-color: #666666;
+    --border-color: #222222;
 }
 
-nav li {
-  margin: 0 60px;          /* spacing between nav items */
-}
-
-nav a {
-  text-decoration: none;   /* remove underline */
-  color: orangered;        /* link color */
-  padding: 10px;
-  display: block;          /* make entire area clickable */
-}
-
-nav a:hover {
-  background-color: #555;  /* hover effect */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --heading-color: #ffffff;
+    --tagline-color: #bbbbbb;
+    --border-color: #444444;
 }
 
 /* Global Body Styling */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* font stack */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
-    color: #111111; 
-    background-color: #ffffff; 
+    color: var(--text-color); 
+    background-color: var(--bg-color); 
     margin: 0;
     padding: 0;
-    line-height: 2;         /* spacing between lines */
+    line-height: 2;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Main Content Container */
@@ -43,22 +38,23 @@ body {
 
 /* Fixed Navigation Bar */
 nav {
-    background-color: #2222; 
-    position: fixed;         /* stays at top */
+    background-color: #222222; 
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100;            /* stays above other elements */
+    z-index: 100;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 20px 0;
+    padding: 15px 0;
     margin: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav li {
-    display: inline-block;   /* horizontal layout */
     margin: 0 15px;
 }
 
@@ -76,17 +72,36 @@ nav a:hover, nav a.active {
     color: orangered;        
 }
 
+/* Dark Mode Toggle Button in Navbar */
+#theme-toggle {
+    background-color: orangered;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#theme-toggle:hover {
+    background-color: #cc3700;
+}
+
 /* Headings */
 h1 {
     font-size: 3rem;
-    color: black;
+    color: var(--heading-color);
     margin-bottom: 5px;
     font-weight: 300;
 }
 
 h2 {
     font-size: 1.8rem;
-    color: black; 
+    color: var(--heading-color); 
     margin-top: 30px;
     margin-bottom: 20px;
     font-weight: 400;
@@ -97,7 +112,7 @@ h2 {
 /* Tagline Styling */
 .tagline {
     font-size: 1.15rem;
-    color: #666666; 
+    color: var(--tagline-color); 
     margin-bottom: 30px;
     font-style: italic;
 }
@@ -126,7 +141,7 @@ h2 {
 .skills-table th, .skills-table td {
     padding: 12px 10px;
     text-align: left;
-    border-bottom: 1px solid #222222;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .skills-table th {
@@ -136,7 +151,7 @@ h2 {
 }
 
 .skills-table td {
-    color: black;
+    color: var(--text-color);
 }
 
 /* Contact Section */
@@ -161,41 +176,34 @@ footer {
 
 /* Image Responsiveness */
 img {
-    max-width: 100%;   /* shrink with screen */
+    max-width: 100%;
     height: auto;
 }
 
 /* Responsive Tablet */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: row; 
         flex-wrap: wrap;    
-        align-items: center;
     }
 
     nav li {
         margin: 5px 10px;    
     }
 
-    h1 {
-        font-size: 3rem;   
-    }
-
     .container {
-        margin: 40px auto;
+        margin: 80px auto 40px auto;
     }
 }
 
 /* Responsive Design - Mobile */
 @media (max-width: 480px) {
     nav ul {
-        flex-direction: column; /* stack vertically */
+        flex-direction: column;
         padding: 10px 0;
-        margin: 8px 0;
     }
 
     nav li {
-        margin: 8px 0;
+        margin: 6px 0;
     }
 
     nav a {
@@ -213,11 +221,10 @@ img {
     .tagline { 
         font-size: 1rem;
     }
-}
 
-/* Responsive Table */
-.skills-table {
-    width: 100%; 
+    .container {
+        margin-top: 220px; /* Keeps content below stacked mobile navbar */
+    }
 }
 
 /* Responsive Video */
