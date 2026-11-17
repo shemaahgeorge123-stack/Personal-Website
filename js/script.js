@@ -93,3 +93,28 @@ if (backToTopBtn) {
     window.addEventListener("scroll", toggleBackToTopButton);
     backToTopBtn.addEventListener("click", scrollToTop);
 }
+
+
+
+
+// Feature 4: Show / Hide "Read More" Content
+
+// 1. Select the button and the hidden paragraph from the About page
+const readMoreBtn = document.getElementById("read-more-btn");
+const careerMoreText = document.getElementById("career-more-text");
+
+// 2. Toggle the paragraph visibility and update button text on click
+function toggleCareerDetails() {
+    if (careerMoreText.style.display === "none") {
+        careerMoreText.style.display = "block";
+        readMoreBtn.textContent = "Read Less";
+    } else {
+        careerMoreText.style.display = "none";
+        readMoreBtn.textContent = "Read More";
+    }
+}
+
+// 3. Only attach the click listener when we are on the About page
+if (readMoreBtn && careerMoreText) {
+    readMoreBtn.addEventListener("click", toggleCareerDetails);
+}
