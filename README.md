@@ -35,3 +35,6 @@ All 4 HTML files for the 4 different pages are within the Personal-Website folde
 Working on this redesign was both interesting and exciting because it gave me the chance to experiment with different ways of updating and enhancing my website. Each time I reloaded the pages, I could immediately see the changes play out, which made the process feel interactive and rewarding. One of the highlights was testing the site on mobile devices and comparing the layout to the desktop version. Seeing the contrast between the two really showed me the importance of responsive design and how CSS media queries can transform the user experience.
 
 Another part of the process that stood out was deciding where and which comments to add in both the HTML and CSS code. It felt a little choicy at times, but it helped me think carefully about which sections needed explanation and documentation. This made me more aware of how comments can guide future readers of the code, including myself. Overall, going through the entire process was engaging because I was interacting with tools and techniques I hadn’t used before. It gave me a stronger understanding of how structure, responsiveness, and version control all come together to create a professional website.
+
+
+
