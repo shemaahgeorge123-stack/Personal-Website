@@ -31,9 +31,8 @@ body {
 
 /*Timed welcome message pop up*/
 
-/* ==========================================
-   Welcome Pop-up Modal Styling
-   ========================================== */
+/*Welcome Pop-up Modal Styling*/
+
 .modal-overlay {
     display: none; /* Hidden until JavaScript opens it */
     position: fixed;
@@ -288,4 +287,28 @@ img {
 iframe {
     max-width: 100%;
     height: auto;
+}
+
+
+/* Back-to-Top Floating Button Styling */
+#back-to-top {
+    display: none; /* Hidden until the user scrolls down */
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99;
+    background-color: orangered;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease;
+}
+
+#back-to-top:hover {
+    background-color: #cc3700;
 }
