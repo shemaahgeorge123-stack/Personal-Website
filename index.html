@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/script.js" defer></script>
+
 </head>
 <body>
 
@@ -15,6 +17,8 @@
             <li><a href="about.html"><strong>About</strong></a></li>
             <li><a href="portfolio.html"><strong>Portfolio</strong></a></li>
             <li><a href="contact.html"><strong>Contact</strong></a></li>
+            <li><button id="theme-toggle">Dark Mode</button></li>
+
         </ul>
     </nav>
 
@@ -29,15 +33,34 @@
 
          <!-- Welcome section -->
         <section> 
-        <h2>Welcome to My Domain</h2>
-        <p>This is my online profile, where you will learn a little bit more about me. Hop around throughout the pages to learn more specific things about me.</p>
+            <h2 id="welcome-greeting">Welcome to My Domain</h2>  <!-- <--- ADD THE ID HERE -->
+            <p>This is my online domain, where you will learn a small bit more about me. Hop around throughout the pages to learn more specific things about me.</p>
         </section>
+
     </main>
+        <!-- Welcome Pop-up Modal -->
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3 id="modal-greeting">Welcome!</h3>
+            <p>Thank you for visiting my personal website.</p>
+            <button id="close-modal-btn">Okay</button>
+        </div>
+    </div>
+
+        <!-- Floating Back-to-Top Button -->
+    <button id="back-to-top" title="Go to top">↑ Top</button>
+</body>
+
+</body>
+
 
     <footer>
         <p>© 2026 Shemaah George. All rights reserved.</p>
 
 
     </footer>
+
+
+    
 </body>
 </html>

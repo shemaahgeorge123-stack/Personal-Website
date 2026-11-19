@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
     <link rel="stylesheet" href=CSS/style.css>
+    <script src="js/script.js" defer></script>
+
 </head>
 <body>
 
@@ -15,6 +17,8 @@
             <li><a href="about.html"><strong>About</strong></a></li>
             <li><a href="portfolio.html"><strong>Portfolio</strong></a></li>
             <li><a href="contact.html"><strong>Contact</strong></a></li>
+            <li><button id="theme-toggle">Dark Mode</button></li>
+
         </ul>
     </nav>
 
@@ -62,8 +66,38 @@
                     </tr>
                 </tbody>
             </table>
+
+                    
+            <!-- Interactive section for visitors to guess a skill -->
+            <p class="guess-prompt"><strong>Think you know me?</strong> Guess one of my other skills, my skill level, and how much I enjoy it to add your guess to the table:</p>
+            <div class="add-skill-form">
+                <input type="text" id="skill-input" placeholder="Guess a Skill">
+                <input type="text" id="level-input" placeholder="Guessed Level">
+                <input type="text" id="enjoyment-input" placeholder="Guessed Enjoyment">
+                <button id="add-skill-btn" type="button">Submit Guess</button>
+            </div>
         </section>
+
+
+        </section>
+
+        </section>
+        <!-- Career Path -->
+        <section>
+            <h2>My Desired Career Path</h2>
+            <p>Leaving secondary school I enjoyed Information Technology &amp; Economics most. Naturally I continued pursuing both fields.</p>
+            
+            <!-- Hidden extra content toggled by JavaScript -->
+            <p id="career-more-text" style="display: none;">There were some interesting challenges in making it possible, and it is definitely a unique experience. However, I do enjoy my academic niche and look forward to continuing to pursue both fields in the future combining technical problem-solving with economic decision-making.</p>
+            
+            <button id="read-more-btn" type="button">Read More</button>
+        </section>
+
     </main>
+
+        <!-- Floating Back-to-Top Button -->
+    <button id="back-to-top" title="Go to top">↑ Top</button>
+</body>
 
     <!-- Footer -->
     <footer>
