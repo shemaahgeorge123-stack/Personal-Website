@@ -118,3 +118,57 @@ function toggleCareerDetails() {
 if (readMoreBtn && careerMoreText) {
     readMoreBtn.addEventListener("click", toggleCareerDetails);
 }
+
+
+
+// ==========================================
+// Feature 5: Guess My Skill (Dynamic Table Row)
+// ==========================================
+
+const addSkillBtn = document.getElementById("add-skill-btn");
+const skillsTableBody = document.querySelector(".skills-table tbody");
+
+function addSkillGuessRow() {
+    // 1. Read the visitor's guessed skill, level, and enjoyment
+    const skillInput = document.getElementById("skill-input");
+    const levelInput = document.getElementById("level-input");
+    const enjoymentInput = document.getElementById("enjoyment-input");
+
+    const guessedSkill = skillInput.value.trim();
+    const guessedLevel = levelInput.value.trim();
+    const guessedEnjoyment = enjoymentInput.value.trim();
+
+    // 2. Make sure all three boxes are filled in
+    if (guessedSkill === "" || guessedLevel === "" || guessedEnjoyment === "") {
+        alert("Please fill in your guessed skill, level, and enjoyment!");
+        return;
+    }
+
+    // 3. Dynamically create a new table row (<tr>) and three cells (<td>)
+    const newRow = document.createElement("tr");
+
+    const skillCell = document.createElement("td");
+    skillCell.textContent = guessedSkill + " (Guess)";
+
+    const levelCell = document.createElement("td");
+    levelCell.textContent = guessedLevel;
+
+    const enjoymentCell = document.createElement("td");
+    enjoymentCell.textContent = guessedEnjoyment;
+
+    // 4. Append the cells into the row, and the row into the table
+    newRow.appendChild(skillCell);
+    newRow.appendChild(levelCell);
+    newRow.appendChild(enjoymentCell);
+    skillsTableBody.appendChild(newRow);
+
+    // 5. Clear the input boxes after submitting
+    skillInput.value = "";
+    levelInput.value = "";
+    enjoymentInput.value = "";
+}
+
+// Only attach the click listener when we are on the About page
+if (addSkillBtn && skillsTableBody) {
+    addSkillBtn.addEventListener("click", addSkillGuessRow);
+}
