@@ -121,9 +121,9 @@ if (readMoreBtn && careerMoreText) {
 
 
 
-// ==========================================
+
 // Feature 5: Guess My Skill (Dynamic Table Row)
-// ==========================================
+
 
 const addSkillBtn = document.getElementById("add-skill-btn");
 const skillsTableBody = document.querySelector(".skills-table tbody");
